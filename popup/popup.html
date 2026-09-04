@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saksham Path - Web Accessibility</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="sp-popup-card">
+    <!-- Header -->
+    <header class="sp-popup-header">
+      <div class="sp-popup-brand">
+        <div class="sp-popup-logo">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="4.5" r="2.5"></circle>
+            <path d="M4 9h16"></path>
+            <path d="M12 9v7"></path>
+            <path d="m8 22 4-6 4 6"></path>
+          </svg>
+        </div>
+        <div>
+          <h1 class="sp-popup-title">Saksham Path</h1>
+          <p class="sp-popup-subtitle">Web Accessibility Assistant</p>
+        </div>
+      </div>
+      <span class="sp-status-pill sp-status-active" id="status-badge">Active</span>
+    </header>
+
+    <!-- Main Content -->
+    <main class="sp-popup-body">
+      <!-- Quick Action: Open Sidebar -->
+      <button class="sp-btn-primary" id="btn-open-panel" type="button" aria-label="Open on-page accessibility panel">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+          <path d="M9 3v18"></path>
+        </svg>
+        Open Accessibility Panel
+      </button>
+
+      <!-- Secondary Action: Reset Page Adjustments -->
+      <button class="sp-btn-secondary" id="btn-reset-page" type="button" aria-label="Reset all accessibility settings on this page">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+          <path d="M3 3v5h5"></path>
+        </svg>
+        Reset Adjustments
+      </button>
+
+      <!-- Information & Shortcuts List -->
+      <section class="sp-info-box" aria-labelledby="shortcuts-heading">
+        <h2 id="shortcuts-heading" class="sp-info-title">Accessibility Shortcuts</h2>
+        <ul class="sp-shortcuts-list">
+          <li>
+            <span>Open / Close Panel</span>
+            <kbd>Click Icon</kbd>
+          </li>
+          <li>
+            <span>Dismiss Panel</span>
+            <kbd>Esc</kbd>
+          </li>
+          <li>
+            <span>Move Button</span>
+            <kbd>Drag ↕</kbd>
+          </li>
+          <li>
+            <span>Cycle Controls</span>
+            <kbd>Tab</kbd>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="sp-popup-footer">
+      <span>Saksham Path v1.0</span>
+      <span class="sp-footer-tag">Manifest V3</span>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
